@@ -17,7 +17,7 @@ body{
     height: 1440px;
     background-image: url('Extras/bg5.jpg');
     background-repeat: no-repeat;
-    background-size: 202vh;
+    background-size: contain;
 }
 
 .main{

@@ -17,7 +17,7 @@ body{
     height: 1530px;
     background-image: url('Extras/layer_1 2.png');
     background-repeat: no-repeat;
-    background-size: 201.5vh;
+    background-size: contain;
 }
 
 .main{
