@@ -125,17 +125,26 @@ nav ul li a.Active{
     padding-top: 5px;
 }
 
-.description h2 {
+.description h3 {
     text-transform: uppercase;
     font-weight: bold;
 }
 
-.description p, h2 {
+.description h3 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 15px;
+    padding-top: 7px;
+    border-radius: .50rem;
+    margin-right: 315px;
+}
+
+.description h4 {
     background-color: rgba(0, 0, 0, 0.5);
     padding-left: 15px;
     padding-top: 7px;
     border-radius: .50rem;
 }
+
 
 input {
     display: none;
