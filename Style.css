@@ -1,0 +1,238 @@
+@font-face { font-family: Andy Bold Font; src: url('Extras/ANDYB.TTF'); } 
+@font-face { font-family: Andy Bold Font; font-weight: bold; src: url('Extras/ANDYB.TTF');}
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Andy Bold Font;
+}
+
+body{
+    background: #000;
+    position: relative;
+    overflow-y: scroll;
+    Overflow-x: hidden;
+    height: 1420px;
+}
+
+.main{
+    width: 100%;
+    min-height: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .Terraria{
+    width: 300px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+nav ul li a:hover,
+nav ul li a.Active{
+    background: #fff;
+    color: #2b1055;
+}
+
+.BackTrailer{
+    position: absolute;
+    right: 0;
+    bottom: 37vh;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .BackTrailer{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .BackTrailer{
+        width: auto;
+        height: 100%;
+    }
+}
+
+footer{
+    width: 100%;
+    height: 430px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 70px 0 30px;
+    border-top-left-radius: 125px;
+    border-top-right-radius: 125px;
+    font-size: 17px;
+    line-height: 20px;
+    z-index: 100;
+    margin-top: auto;
+}
+
+.Foot{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.Info{
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.Info:nth-child(2), .Info:nth-child(3){
+    flex-basis: 15%;
+}
+
+.Relogic{
+    width: 200px;
+    margin-bottom: 40px;
+    margin-top: 25px;
+}
+
+.Info h2{
+    width: fit-content;
+    margin-bottom: 50px;
+    margin-top: 35px;
+    position: relative;
+    font-weight: bold;
+}
+
+.Email{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+form .far{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+
+form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+form button .fas{
+    font-size: 16px;
+    color: #ccc;
+}
+
+.Socials .fab{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.CopyRight{
+    text-align: center;
+}
+
+.Underline{
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+.Underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving{
+    0%{
+        left: -20%;
+    }
+    100%{
+    left: 100%;
+    }
+}
