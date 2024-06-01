@@ -1,18 +1,29 @@
-@font-face { font-family: Andy Bold Font; src: url('Extras/ANDYB.TTF'); } 
-@font-face { font-family: Andy Bold Font; font-weight: bold; src: url('Extras/ANDYB.TTF');}
- 
-*{
+/* Define custom font */
+@font-face { 
+    font-family: Andy Bold Font; 
+    src: url('Extras/ANDYB.TTF'); 
+} 
+
+@font-face { 
+    font-family: Andy Bold Font; 
+    font-weight: bold; 
+    src: url('Extras/ANDYB.TTF');
+}
+
+/* Reset margin, padding, and set box-sizing and font */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Andy Bold Font;
 }
 
-body{
+/* Style the body element */
+body {
     background: #e3edf7;
     position: relative;
     overflow-y: scroll;
-    Overflow-x: hidden;
+    overflow-x: hidden;
     background-color: #000;
     height: 1530px;
     background-image: url('Extras/layer_1 2.png');
@@ -20,7 +31,13 @@ body{
     background-size: contain;
 }
 
-.main{
+/* Custom cursor for the entire document */
+html {
+    cursor: url('Extras/cursor.png'), auto;
+}
+
+/* Main container styling */
+.main {
     width: 100%;
     min-height: 100%;
     height: 100vh;
@@ -31,7 +48,8 @@ body{
     justify-content: center;
 }
 
-nav{
+/* Navigation bar styling */
+nav {
     width: 100%;
     position: absolute;
     top: 0;
@@ -42,17 +60,20 @@ nav{
     justify-content: space-between;
 }
 
-nav .Terraria{
+/* Logo image styling */
+nav .Terraria {
     width: 300px;
 }
 
-nav ul li{
+/* Navigation menu item styling */
+nav ul li {
     list-style: none;
     display: inline-block;
     margin-left: 40px;
 }
 
-nav ul li a{
+/* Navigation links styling */
+nav ul li a {
     text-decoration: none;
     color: #000;
     font-size: 24px;
@@ -61,12 +82,14 @@ nav ul li a{
     border-radius: 20px;
 }
 
+/* Hover and active state styling for navigation links */
 nav ul li a:hover,
-nav ul li a.Active{
+nav ul li a.Active {
     background: #000;
     color: #fff;
 }
 
+/* Container styling for centered content */
 .container {
     margin-top: -250px;
     height: 500px;
@@ -75,6 +98,7 @@ nav ul li a.Active{
     justify-content: start;
 }
 
+/* Card styling for slide items */
 .card {
     width: 80px;
     border-radius: .75rem;
@@ -89,12 +113,14 @@ nav ul li a.Active{
     box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
 }
 
+/* Row inside card styling */
 .card > .row {
     color: white;
     display: flex;
     flex-wrap: nowrap;
 }
 
+/* Icon inside row styling */
 .card > .row > .icon {
     background: #223;
     color: white;
@@ -106,6 +132,7 @@ nav ul li a.Active{
     margin: 15px;
 }
 
+/* Description inside row styling */
 .card > .row > .description {
     display: flex;
     justify-content: center;
@@ -120,16 +147,19 @@ nav ul li a.Active{
     transition: all .3s ease;
 }
 
+/* Paragraph inside description styling */
 .description p {
     color: #fff;
     padding-top: 5px;
 }
 
+/* Heading inside description styling */
 .description h3 {
     text-transform: uppercase;
     font-weight: bold;
 }
 
+/* Specific styling for h3 inside description */
 .description h3 {
     background-color: rgba(0, 0, 0, 0.5);
     padding-left: 15px;
@@ -138,6 +168,7 @@ nav ul li a.Active{
     margin-right: 315px;
 }
 
+/* Specific styling for h4 inside description */
 .description h4 {
     background-color: rgba(0, 0, 0, 0.5);
     padding-left: 15px;
@@ -145,11 +176,12 @@ nav ul li a.Active{
     border-radius: .50rem;
 }
 
-
+/* Hide input elements */
 input {
     display: none;
 }
 
+/* Expand card and show description on input checked */
 input:checked + label {
     width: 600px;
 }
@@ -159,6 +191,7 @@ input:checked + label .description {
     transform: translateY(0) !important;
 }
 
+/* Background image for specific cards */
 .card[for="c1"] {
     background-image: url('Extras/1.webp');
     background-position: center;
@@ -229,7 +262,8 @@ input:checked + label .description {
     background-repeat: no-repeat;
 }
 
-footer{
+/* Footer styling */
+footer {
     width: 100%;
     height: 430px;
     position: absolute;
@@ -245,7 +279,8 @@ footer{
     margin-top: auto;
 }
 
-.Foot{
+/* Inner footer container styling */
+.Foot {
     width: 85%;
     margin: auto;
     display: flex;
@@ -254,22 +289,27 @@ footer{
     justify-content: space-between;
 }
 
-.Info{
+/* Info section inside footer styling */
+.Info {
     flex-basis: 25%;
     padding: 10px;
 }
 
-.Info:nth-child(2), .Info:nth-child(3){
+/* Adjust flex-basis for specific Info elements */
+.Info:nth-child(2), 
+.Info:nth-child(3) {
     flex-basis: 15%;
 }
 
-.Relogic{
+/* Relogic logo styling */
+.Relogic {
     width: 200px;
     margin-bottom: 40px;
     margin-top: 25px;
 }
 
-.Info h2{
+/* Info heading styling */
+.Info h2 {
     width: fit-content;
     margin-bottom: 50px;
     margin-top: 35px;
@@ -277,23 +317,27 @@ footer{
     font-weight: bold;
 }
 
-.Email{
+/* Email section styling */
+.Email {
     width: fit-content;
     border-bottom: 1px solid #ccc;
     margin: 20px 0;
 }
 
-ul li{
+/* List item styling */
+ul li {
     list-style: none;
     margin-bottom: 12px;
 }
 
-ul li a{
+/* Links inside list items styling */
+ul li a {
     text-decoration: none;
     color: white;
 }
 
-form{
+/* Form styling */
+form {
     padding-bottom: 15px;
     display: flex;
     align-items: center;
@@ -302,12 +346,14 @@ form{
     margin-bottom: 50px;
 }
 
-form .far{
+/* Icon inside form styling */
+form .far {
     font-size: 18px;
     margin-right: 10px;
 }
 
-form input{
+/* Input inside form styling */
+form input {
     width: 100%;
     background: transparent;
     color: #ccc;
@@ -315,19 +361,22 @@ form input{
     outline: none;
 }
 
-form button{
+/* Button inside form styling */
+form button {
     background: transparent;
     border: 0;
     outline: none;
     cursor: pointer;
 }
 
-form button .fas{
+/* Icon inside button styling */
+form button .fas {
     font-size: 16px;
     color: #ccc;
 }
 
-.Socials .fab{
+/* Social media icons styling */
+.Socials .fab {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -340,18 +389,21 @@ form button .fas{
     cursor: pointer;
 }
 
-hr{
+/* Horizontal rule styling */
+hr {
     width: 90%;
     border: 0;
     border-bottom: 1px solid #ccc;
     margin: 20px auto;
 }
 
-.CopyRight{
+/* Copyright section styling */
+.CopyRight {
     text-align: center;
 }
 
-.Underline{
+/* Underline animation styling */
+.Underline {
     width: 100%;
     height: 5px;
     background: #767676;
@@ -362,7 +414,8 @@ hr{
     overflow: hidden;
 }
 
-.Underline span{
+/* Span inside underline animation styling */
+.Underline span {
     width: 15px;
     height: 100%;
     background: #fff;
@@ -373,11 +426,12 @@ hr{
     animation: moving 2s linear infinite;
 }
 
-@keyframes moving{
-    0%{
+/* Keyframes for underline animation */
+@keyframes moving {
+    0% {
         left: -20%;
     }
-    100%{
-    left: 100%;
+    100% {
+        left: 100%;
     }
 }

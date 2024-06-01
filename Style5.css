@@ -1,445 +1,515 @@
-@font-face { font-family: Andy Bold Font; src: url('Extras/ANDYB.TTF'); } 
-@font-face { font-family: Andy Bold Font; font-weight: bold; src: url('Extras/ANDYB.TTF');}
- 
+/* Define custom font */
+@font-face { 
+  font-family: Andy Bold Font; 
+  src: url('Extras/ANDYB.TTF'); 
+} 
+
+@font-face { 
+  font-family: Andy Bold Font; 
+  font-weight: bold; 
+  src: url('Extras/ANDYB.TTF'); 
+}
+
+/* Reset margin, padding, and set box-sizing and font for all elements */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Andy Bold Font;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Andy Bold Font;
 }
 
+/* Set custom cursor for the entire document */
+html {
+cursor: url('Extras/cursor.png'), auto;
+}
+
+/* Define custom color variables */
 :root {
-    --white: #fff;
-    --black: #323135;
-    --crystal: #a8dadd;
-    --columbia-blue: #cee9e4;
-    --midnight-green: rgba(0, 0, 0, 0.5);
-    --yellow: #e5f33d;
+  --white: #fff;
+  --black: #323135;
+  --crystal: #a8dadd;
+  --columbia-blue: #cee9e4;
+  --tblack: rgba(0, 0, 0, 0.5);
+  --yellow: #e5f33d;
 }
 
+/* Button default styles */
 button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
-  
+
+/* Anchor tag default styles */
 a {
-    color: inherit;
+  color: inherit;
 }
 
-body{
-    background: #000;
-    position: relative;
-    overflow-y: scroll;
-    Overflow-x: hidden;
-    height: 1540px;
-    background-image: url('Extras/layer_1.png');
-    background-repeat: no-repeat;
-    background-size: contain;
+/* Body styles */
+body {
+  background: #000;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 1540px;
+  background-image: url('Extras/layer_1.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.main{
-    width: 100%;
-    min-height: 100%;
-    height: 100vh;
-    position: relative;
-    padding: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Main container styles */
+.main {
+  width: 100%;
+  min-height: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-nav{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 20px 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Navigation bar styles */
+nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-nav .Terraria{
-    width: 300px;
+/* Logo inside navigation bar */
+nav .Terraria {
+  width: 300px;
 }
 
-nav ul li{
-    list-style: none;
-    display: inline-block;
-    margin-left: 40px;
+/* Navigation menu item styles */
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 40px;
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 5px 15px;
-    border-radius: 20px;
+/* Navigation links styles */
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 20px;
 }
 
+/* Hover and active state styles for navigation links */
 nav ul li a:hover,
-nav ul li a.Active{
-    background: #fff;
-    color: #2b1055;
+nav ul li a.Active {
+  background: #fff;
+  color: #2b1055;
 }
 
+/* Section styles */
 .section {
-    padding: 50px 0;
-  }
-  
-  .section .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .section h1 {
-    font-size: 2.5rem;
-    line-height: 1.25;
-  }
-  
-  .section h2 {
-    font-size: 1.3rem;
-  }
-  
+  padding: 50px 0;
+}
+
+/* Container inside section styles */
+.section .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Section heading styles */
+.section h1 {
+  font-size: 2.5rem;
+  line-height: 1.25;
+}
+
+/* Section subheading styles */
+.section h2 {
+  font-size: 1.3rem;
+}
+
+/* Timeline container styles */
+.timeline {
+  position: absolute;
+  top: 24%;
+  white-space: nowrap;
+  max-width: 1400px;
+  padding: 0 10px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 320px auto;
+  grid-gap: 20px;
+}
+
+/* Timeline gradient before and after styles */
+.timeline::before,
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 30px;
+  width: 100px;
+  z-index: 2;
+}
+
+.timeline::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--timeline-gradient));
+}
+
+.timeline::before {
+  left: 340px;
+  background: linear-gradient(90deg, var(--timeline-gradient));
+}
+
+/* Timeline info box styles */
+.timeline .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 40px;
+  color: var(--white);
+  background: var(--tblack);
+  white-space: normal;
+  border-radius: 10px;
+}
+
+/* Timeline info image styles */
+.timeline .info img {
+  margin-bottom: 20px;
+}
+
+/* Timeline info paragraph styles */
+.timeline .info p {
+  margin-top: 10px;
+  color: var(--crystal);
+}
+
+/* Timeline info link styles */
+.timeline .info a {
+  text-decoration: none;
+}
+
+/* Timeline scrollbar styles */
+.timeline ol::-webkit-scrollbar {
+  height: 12px;
+}
+
+.timeline ol::-webkit-scrollbar-thumb,
+.timeline ol::-webkit-scrollbar-track {
+  border-radius: 92px;
+}
+
+.timeline ol::-webkit-scrollbar-thumb {
+  background: var(--tblack);
+}
+
+.timeline ol::-webkit-scrollbar-track {
+  background: var(--yellow);
+}
+
+/* Timeline ordered list styles */
+.timeline ol {
+  font-size: 0;
+  padding: 250px 0;
+  transition: all 1s;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: rgba(225, 255, 255, 0.5) var(--tblack);
+}
+
+/* Timeline list item styles */
+.timeline ol li {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  width: 160px;
+  height: 5px;
+  background: var(--white);
+  scroll-snap-align: start;
+}
+
+/* Last timeline list item styles */
+.timeline ol li:last-child {
+  width: 340px;
+}
+
+/* Timeline list item margin styles */
+.timeline ol li:not(:first-child) {
+  margin-left: 14px;
+}
+
+/* Timeline list item connection styles */
+.timeline ol li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 1px);
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #01565b;
+  z-index: 1;
+}
+
+/* Timeline list item detail box styles */
+.timeline ol li div {
+  position: absolute;
+  left: calc(100% + 7px);
+  width: 280px;
+  padding: 15px;
+  font-size: 1rem;
+  white-space: normal;
+  color: var(--black);
+  background: var(--white);
+  border-radius: 0 10px 10px 10px;
+}
+
+/* Timeline detail box arrow styles */
+.timeline ol li div::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* Odd timeline list item detail box styles */
+.timeline ol li:nth-child(odd) div {
+  top: -16px;
+  transform: translateY(-100%);
+  border-radius: 10px 10px 10px 0;
+}
+
+/* Odd timeline detail box arrow styles */
+.timeline ol li:nth-child(odd) div::before {
+  top: 100%;
+  border-width: 8px 8px 0 0;
+  border-color: var(--white) transparent transparent transparent;
+}
+
+/* Even timeline list item detail box styles */
+.timeline ol li:nth-child(even) div {
+  top: calc(100% + 16px);
+}
+
+/* Even timeline detail box arrow styles */
+.timeline ol li:nth-child(even) div::before {
+  top: -8px;
+  border-width: 8px 0 0 8px;
+  border-color: transparent transparent transparent var(--white);
+}
+
+/* Timeline time styles */
+.timeline time {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #01565b;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 800px) {
   .timeline {
-    position: absolute;
-    top:24%;
-    white-space: nowrap;
-    max-width: 1400px;
-    padding: 0 10px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 320px auto;
-    grid-gap: 20px;
+      display: block;
   }
-  
+
   .timeline::before,
   .timeline::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 30px;
-    width: 100px;
-    z-index: 2;
-  }
-  
-  .timeline::after {
-    right: 0;
-    background: linear-gradient(270deg, var(--timeline-gradient));
-  }
-  
-  .timeline::before {
-    left: 340px;
-    background: linear-gradient(90deg, var(--timeline-gradient));
-  }
-  
-  .timeline .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px 40px;
-    color: var(--white);
-    background: var(--midnight-green);
-    white-space: normal;
-    border-radius: 10px;
-  }
-  
-  .timeline .info img {
-    margin-bottom: 20px;
-  }
-  
-  .timeline .info p {
-    margin-top: 10px;
-    color: var(--crystal);
-  }
-  
-  .timeline .info a {
-    text-decoration: none;
-  }
-  
-  .timeline ol::-webkit-scrollbar {
-    height: 12px;
-  }
-  
-  .timeline ol::-webkit-scrollbar-thumb,
-  .timeline ol::-webkit-scrollbar-track {
-    border-radius: 92px;
-  }
-  
-  .timeline ol::-webkit-scrollbar-thumb {
-    background: var(--midnight-green);
-  }
-  
-  .timeline ol::-webkit-scrollbar-track {
-    background: var(--yellow);
-  }
-  
-  .timeline ol {
-    font-size: 0;
-    padding: 250px 0;
-    transition: all 1s;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scrollbar-color: rgba(225, 255, 255, 0.5) var(--midnight-green);
-  }
-  
-  .timeline ol li {
-    position: relative;
-    display: inline-block;
-    list-style-type: none;
-    width: 160px;
-    height: 5px;
-    background: var(--white);
-    scroll-snap-align: start;
-  }
-  
-  .timeline ol li:last-child {
-    width: 340px;
-  }
-  
-  .timeline ol li:not(:first-child) {
-    margin-left: 14px;
-  }
-  
-  .timeline ol li:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: calc(100% + 1px);
-    bottom: 0;
-    width: 16px;
-    height: 16px;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    background: #01565b;
-    z-index: 1;
-  }
-  
-  .timeline ol li div {
-    position: absolute;
-    left: calc(100% + 7px);
-    width: 280px;
-    padding: 15px;
-    font-size: 1rem;
-    white-space: normal;
-    color: var(--black);
-    background: var(--white);
-    border-radius: 0 10px 10px 10px;
-  }
-  
-  .timeline ol li div::before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-  }
-  
-  .timeline ol li:nth-child(odd) div {
-    top: -16px;
-    transform: translateY(-100%);
-    border-radius: 10px 10px 10px 0;
-  }
-  
-  .timeline ol li:nth-child(odd) div::before {
-    top: 100%;
-    border-width: 8px 8px 0 0;
-    border-color: var(--white) transparent transparent transparent;
-  }
-  
-  .timeline ol li:nth-child(even) div {
-    top: calc(100% + 16px);
-  }
-  
-  .timeline ol li:nth-child(even) div::before {
-    top: -8px;
-    border-width: 8px 0 0 8px;
-    border-color: transparent transparent transparent var(--white);
-  }
-  
-  .timeline time {
-    display: block;
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #01565b;
-  }
-  
-  @media screen and (max-width: 800px) {
-    .timeline {
-      display: block;
-    }
-  
-    .timeline::before,
-    .timeline::after {
       width: 50px;
-    }
-  
-    .timeline::before {
-      left: 0;
-    }
-  
-    .timeline .info {
-      display: none;
-    }
   }
 
-footer{
-    width: 100%;
-    height: 430px;
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 70px 0 30px;
-    border-top-left-radius: 125px;
-    border-top-right-radius: 125px;
-    font-size: 17px;
-    line-height: 20px;
-    z-index: 100;
-    margin-top: auto;
+  .timeline::before {
+      left: 0;
+  }
+
+  .timeline .info {
+      display: none;
+  }
 }
 
-.Foot{
-    width: 85%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
+/* Footer styles */
+footer {
+  width: 100%;
+  height: 430px;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 70px 0 30px;
+  border-top-left-radius: 125px;
+  border-top-right-radius: 125px;
+  font-size: 17px;
+  line-height: 20px;
+  z-index: 100;
+  margin-top: auto;
 }
 
-.Info{
-    flex-basis: 25%;
-    padding: 10px;
+/* Footer container styles */
+.Foot {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-.Info:nth-child(2), .Info:nth-child(3){
-    flex-basis: 15%;
+/* Footer info section styles */
+.Info {
+  flex-basis: 25%;
+  padding: 10px;
 }
 
-.Relogic{
-    width: 200px;
-    margin-bottom: 40px;
-    margin-top: 25px;
+/* Specific info section styles */
+.Info:nth-child(2), 
+.Info:nth-child(3) {
+  flex-basis: 15%;
 }
 
-.Info h2{
-    width: fit-content;
-    margin-bottom: 50px;
-    margin-top: 35px;
-    position: relative;
-    font-weight: bold;
+/* Footer logo styles */
+.Relogic {
+  width: 200px;
+  margin-bottom: 40px;
+  margin-top: 25px;
 }
 
-.Email{
-    width: fit-content;
-    border-bottom: 1px solid #ccc;
-    margin: 20px 0;
+/* Footer heading styles */
+.Info h2 {
+  width: fit-content;
+  margin-bottom: 50px;
+  margin-top: 35px;
+  position: relative;
+  font-weight: bold;
 }
 
-ul li{
-    list-style: none;
-    margin-bottom: 12px;
+/* Footer email section styles */
+.Email {
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
 }
 
-ul li a{
-    text-decoration: none;
-    color: white;
+/* Footer list item styles */
+ul li {
+  list-style: none;
+  margin-bottom: 12px;
 }
 
-form{
-    padding-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 50px;
+/* Footer link styles */
+ul li a {
+  text-decoration: none;
+  color: white;
 }
 
-form .far{
-    font-size: 18px;
-    margin-right: 10px;
+/* Footer form styles */
+form {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
 }
 
-form input{
-    width: 100%;
-    background: transparent;
-    color: #ccc;
-    border: 0;
-    outline: none;
+/* Form icon styles */
+form .far {
+  font-size: 18px;
+  margin-right: 10px;
 }
 
-form button{
-    background: transparent;
-    border: 0;
-    outline: none;
-    cursor: pointer;
+/* Form input styles */
+form input {
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
 }
 
-form button .fas{
-    font-size: 16px;
-    color: #ccc;
+/* Form button styles */
+form button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
 }
 
-.Socials .fab{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 20px;
-    color: #000;
-    background: #fff;
-    margin-right: 15px;
-    cursor: pointer;
+/* Form button icon styles */
+form button .fas {
+  font-size: 16px;
+  color: #ccc;
 }
 
-hr{
-    width: 90%;
-    border: 0;
-    border-bottom: 1px solid #ccc;
-    margin: 20px auto;
+/* Footer social icon styles */
+.Socials .fab {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
 }
 
-.CopyRight{
-    text-align: center;
+/* Horizontal rule styles */
+hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
 }
 
-.Underline{
-    width: 100%;
-    height: 5px;
-    background: #767676;
-    border-radius: 3px;
-    position: absolute;
-    top: 25px;
-    left: 0;
-    overflow: hidden;
+/* Footer copyright section styles */
+.CopyRight {
+  text-align: center;
 }
 
-.Underline span{
-    width: 15px;
-    height: 100%;
-    background: #fff;
-    border-radius: 3px;
-    position: absolute;
-    top: 0;
-    left: 10%;
-    animation: moving 2s linear infinite;
+/* Underline animation container styles */
+.Underline {
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
 }
 
-@keyframes moving{
-    0%{
-        left: -20%;
-    }
-    100%{
-    left: 100%;
-    }
+/* Underline animation span styles */
+.Underline span {
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  animation: moving 2s linear infinite;
+}
+
+/* Underline animation keyframes */
+@keyframes moving {
+  0% {
+      left: -20%;
+  }
+  100% {
+      left: 100%;
+  }
 }

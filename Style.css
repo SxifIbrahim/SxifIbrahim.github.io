@@ -1,6 +1,16 @@
-@font-face { font-family: Andy Bold Font; src: url('Extras/ANDYB.TTF'); } 
-@font-face { font-family: Andy Bold Font; font-weight: bold; src: url('Extras/ANDYB.TTF');}
- 
+/* Define custom font */
+@font-face { 
+    font-family: Andy Bold Font; 
+    src: url('Extras/ANDYB.TTF'); 
+} 
+
+@font-face { 
+    font-family: Andy Bold Font; 
+    font-weight: bold; 
+    src: url('Extras/ANDYB.TTF');
+}
+
+/* Reset margin, padding, and set box-sizing and font */
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +18,7 @@
     font-family: Andy Bold Font;
 }
 
+/* Style the body element */
 body{
     background: #000;
     position: relative;
@@ -16,6 +27,13 @@ body{
     height: 1420px;
 }
 
+/* Custom cursor for the entire document */
+
+html {
+    cursor: url('Extras/cursor.png'), auto;
+}
+
+/* Main container styling */
 .main{
     width: 100%;
     min-height: 100%;
@@ -27,6 +45,7 @@ body{
     justify-content: center;
 }
 
+/* Navigation bar styling */
 nav{
     width: 100%;
     position: absolute;
@@ -38,16 +57,19 @@ nav{
     justify-content: space-between;
 }
 
+/* Logo image styling */
 nav .Terraria{
     width: 300px;
 }
 
+/* Navigation menu item styling */
 nav ul li{
     list-style: none;
     display: inline-block;
     margin-left: 40px;
 }
 
+/* Navigation links styling */
 nav ul li a{
     text-decoration: none;
     color: #fff;
@@ -57,12 +79,14 @@ nav ul li a{
     border-radius: 20px;
 }
 
+/* Hover and active state styling for navigation links */
 nav ul li a:hover,
 nav ul li a.Active{
     background: #fff;
     color: #2b1055;
 }
 
+/* Background trailer image styling */
 .BackTrailer{
     position: absolute;
     right: 0;
@@ -70,6 +94,7 @@ nav ul li a.Active{
     z-index: -1;
 }
 
+/* Responsive design for background trailer image */
 @media (min-aspect-ratio: 16/9){
     .BackTrailer{
         width: 100%;
@@ -84,6 +109,7 @@ nav ul li a.Active{
     }
 }
 
+/* Footer styling */
 footer{
     width: 100%;
     height: 430px;
@@ -100,6 +126,7 @@ footer{
     margin-top: auto;
 }
 
+/* Footer container styling */
 .Foot{
     width: 85%;
     margin: auto;
@@ -109,21 +136,27 @@ footer{
     justify-content: space-between;
 }
 
+/* Footer information section styling */
 .Info{
     flex-basis: 25%;
     padding: 10px;
 }
 
-.Info:nth-child(2), .Info:nth-child(3){
+/* Specific styling for second and third Info sections */
+.Info:nth-child(2), 
+.Info:nth-child(3){
     flex-basis: 15%;
 }
 
+/* Re-Logic logo styling in footer */
 .Relogic{
     width: 200px;
     margin-bottom: 40px;
     margin-top: 25px;
 }
 
+
+/* Footer heading styling */
 .Info h2{
     width: fit-content;
     margin-bottom: 50px;
@@ -132,22 +165,26 @@ footer{
     font-weight: bold;
 }
 
+/* Email section styling in footer */
 .Email{
     width: fit-content;
     border-bottom: 1px solid #ccc;
     margin: 20px 0;
 }
 
+/* List item styling */
 ul li{
     list-style: none;
     margin-bottom: 12px;
 }
 
+/* Footer links styling */
 ul li a{
     text-decoration: none;
     color: white;
 }
 
+/* Form styling in footer */
 form{
     padding-bottom: 15px;
     display: flex;
@@ -157,11 +194,13 @@ form{
     margin-bottom: 50px;
 }
 
+/* Font Awesome icons styling in form */
 form .far{
     font-size: 18px;
     margin-right: 10px;
 }
 
+/* Form input styling */
 form input{
     width: 100%;
     background: transparent;
@@ -170,6 +209,7 @@ form input{
     outline: none;
 }
 
+/* Form button styling */
 form button{
     background: transparent;
     border: 0;
@@ -177,11 +217,13 @@ form button{
     cursor: pointer;
 }
 
+/* Font Awesome icons styling in form button */
 form button .fas{
     font-size: 16px;
     color: #ccc;
 }
 
+/* Social media icon styling */
 .Socials .fab{
     width: 40px;
     height: 40px;
@@ -195,6 +237,7 @@ form button .fas{
     cursor: pointer;
 }
 
+/* Horizontal rule styling */
 hr{
     width: 90%;
     border: 0;
@@ -202,10 +245,12 @@ hr{
     margin: 20px auto;
 }
 
+/* Copyright section styling */
 .CopyRight{
     text-align: center;
 }
 
+/* Underline effect styling */
 .Underline{
     width: 100%;
     height: 5px;
@@ -217,6 +262,7 @@ hr{
     overflow: hidden;
 }
 
+/* Animation span styling within underline */
 .Underline span{
     width: 15px;
     height: 100%;
@@ -228,6 +274,7 @@ hr{
     animation: moving 2s linear infinite;
 }
 
+/* Keyframes for underline animation */
 @keyframes moving{
     0%{
         left: -20%;

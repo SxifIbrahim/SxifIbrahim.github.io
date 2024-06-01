@@ -1,18 +1,29 @@
-@font-face { font-family: Andy Bold Font; src: url('Extras/ANDYB.TTF'); } 
-@font-face { font-family: Andy Bold Font; font-weight: bold; src: url('Extras/ANDYB.TTF');}
- 
-*{
+/* Define custom font */
+@font-face { 
+    font-family: Andy Bold Font; 
+    src: url('Extras/ANDYB.TTF'); 
+} 
+
+@font-face { 
+    font-family: Andy Bold Font; 
+    font-weight: bold; 
+    src: url('Extras/ANDYB.TTF');
+}
+
+/* Reset margin, padding, and set box-sizing and font */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Andy Bold Font;
 }
 
-body{
+/* Style the body element */
+body {
     background: #e3edf7;
     position: relative;
     overflow-y: scroll;
-    Overflow-x: hidden;
+    overflow-x: hidden;
     background-color: #000;
     height: 1440px;
     background-image: url('Extras/bg5.jpg');
@@ -20,7 +31,13 @@ body{
     background-size: contain;
 }
 
-.main{
+/* Custom cursor for the entire document */
+html {
+    cursor: url('Extras/cursor.png'), auto;
+}
+
+/* Main container styling */
+.main {
     width: 100%;
     min-height: 100%;
     height: 100vh;
@@ -31,7 +48,8 @@ body{
     justify-content: center;
 }
 
-nav{
+/* Navigation bar styling */
+nav {
     width: 100%;
     position: absolute;
     top: 0;
@@ -42,17 +60,20 @@ nav{
     justify-content: space-between;
 }
 
-nav .Terraria{
+/* Logo image styling */
+nav .Terraria {
     width: 300px;
 }
 
-nav ul li{
+/* Navigation menu item styling */
+nav ul li {
     list-style: none;
     display: inline-block;
     margin-left: 40px;
 }
 
-nav ul li a{
+/* Navigation links styling */
+nav ul li a {
     text-decoration: none;
     color: #000;
     font-size: 24px;
@@ -61,29 +82,33 @@ nav ul li a{
     border-radius: 20px;
 }
 
+/* Hover and active state styling for navigation links */
 nav ul li a:hover,
-nav ul li a.Active{
+nav ul li a.Active {
     background: #000;
     color: #fff;
 }
 
-.container{
+/* Container styling for centered content */
+.container {
     position: absolute;
-    left:50%;
-    top:40%;
-    transform: translate(-50%,-50%);
-    width:1200px;
-    height:700px;
-    padding:50px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 700px;
+    padding: 50px;
     background-color: #f5f5f5;
     box-shadow: 0 30px 50px #dbdbdb;
 }
 
+/* Slide container styling */
 #slide{
     width:max-content;
     margin-top:50px;
 }
 
+/* Item styling in slide */
 .item{
     width:200px;
     height:300px;
@@ -99,7 +124,9 @@ nav ul li a.Active{
     box-shadow:  0 30px 50px #505050;
 }
 
-.item:nth-child(1), .item:nth-child(2){
+/* First and second item specific styling */
+.item:nth-child(1), 
+.item:nth-child(2){
     left:0;
     top:0;
     transform: translate(0,0);
@@ -109,23 +136,28 @@ nav ul li a.Active{
     box-shadow: none;
 }
 
+/* Positioning for third item */
 .item:nth-child(3){
     left:50%;
 }
 
+/* Positioning for fourth item */
 .item:nth-child(4){
     left:calc(50% + 220px);
 }
 
+/* Positioning for fifth item */
 .item:nth-child(5){
     left:calc(50% + 440px);
 }
 
+/* Positioning and visibility for items after the fifth */
 .item:nth-child(n+6){
     left:calc(50% + 660px);
     opacity: 0;
 }
 
+/* Content styling inside items */
 .item .content{
     position: absolute;
     top:50%;
@@ -139,11 +171,13 @@ nav ul li a.Active{
     font-family: system-ui;
 }
 
+/* Display content for the second item */
 .item:nth-child(2) .content{
     display: block;
     z-index: 11111;
 }
 
+/* Name styling inside content */
 .item .name{
     font-size: 50px;
     font-weight: bold;
@@ -151,6 +185,7 @@ nav ul li a.Active{
     animation:showcontent 1s ease-in-out 1 forwards
 }
 
+/* Description styling inside content */
 .item .des{
     margin:20px 0;
     font-size: 20px;
@@ -158,6 +193,8 @@ nav ul li a.Active{
     animation:showcontent 1s ease-in-out 0.3s 1 forwards
 }
 
+
+/* Button styling inside content */
 .item button{
     padding:10px 20px;
     border:none;
@@ -165,6 +202,7 @@ nav ul li a.Active{
     animation:showcontent 1s ease-in-out 0.6s 1 forwards
 }
 
+/* Keyframes for content animation */
 @keyframes showcontent{
     from{
         opacity: 0;
@@ -177,6 +215,7 @@ nav ul li a.Active{
     }
 }
 
+/* Buttons container styling */
 .buttons{
     position: absolute;
     bottom:30px;
@@ -185,6 +224,7 @@ nav ul li a.Active{
     width:100%;
 }
 
+/* Button styling inside buttons container */
 .buttons button{
     width:50px;
     height:50px;
@@ -193,15 +233,18 @@ nav ul li a.Active{
     transition: 0.5s;
 }
 
+/* Hover state styling for buttons */
 .buttons button:hover{
     background-color: #bac383;
 }
 
+/* Link styling within the .rah class */
 .rah a{
     text-decoration: none;
     color: #000;
 }
 
+/* Footer styling */
 footer{
     width: 100%;
     height: 430px;
@@ -218,6 +261,8 @@ footer{
     margin-top: auto;
 }
 
+
+/* Footer container styling */
 .Foot{
     width: 85%;
     margin: auto;
@@ -227,21 +272,27 @@ footer{
     justify-content: space-between;
 }
 
+/* Footer information section styling */
 .Info{
     flex-basis: 25%;
     padding: 10px;
 }
 
-.Info:nth-child(2), .Info:nth-child(3){
+/* Specific styling for second and third Info sections */
+.Info:nth-child(2), 
+.Info:nth-child(3){
     flex-basis: 15%;
 }
 
+/* Re-Logic logo styling in footer */
 .Relogic{
     width: 200px;
     margin-bottom: 40px;
     margin-top: 25px;
 }
 
+
+/* Footer heading styling */
 .Info h2{
     width: fit-content;
     margin-bottom: 50px;
@@ -250,22 +301,26 @@ footer{
     font-weight: bold;
 }
 
+/* Email section styling in footer */
 .Email{
     width: fit-content;
     border-bottom: 1px solid #ccc;
     margin: 20px 0;
 }
 
+/* List item styling */
 ul li{
     list-style: none;
     margin-bottom: 12px;
 }
 
+/* Footer links styling */
 ul li a{
     text-decoration: none;
     color: white;
 }
 
+/* Form styling in footer */
 form{
     padding-bottom: 15px;
     display: flex;
@@ -275,11 +330,13 @@ form{
     margin-bottom: 50px;
 }
 
+/* Font Awesome icons styling in form */
 form .far{
     font-size: 18px;
     margin-right: 10px;
 }
 
+/* Form input styling */
 form input{
     width: 100%;
     background: transparent;
@@ -288,6 +345,7 @@ form input{
     outline: none;
 }
 
+/* Form button styling */
 form button{
     background: transparent;
     border: 0;
@@ -295,11 +353,13 @@ form button{
     cursor: pointer;
 }
 
+/* Font Awesome icons styling in form button */
 form button .fas{
     font-size: 16px;
     color: #ccc;
 }
 
+/* Social media icon styling */
 .Socials .fab{
     width: 40px;
     height: 40px;
@@ -313,6 +373,7 @@ form button .fas{
     cursor: pointer;
 }
 
+/* Horizontal rule styling */
 hr{
     width: 90%;
     border: 0;
@@ -320,10 +381,12 @@ hr{
     margin: 20px auto;
 }
 
+/* Copyright section styling */
 .CopyRight{
     text-align: center;
 }
 
+/* Underline effect styling */
 .Underline{
     width: 100%;
     height: 5px;
@@ -335,6 +398,7 @@ hr{
     overflow: hidden;
 }
 
+/* Animation span styling within underline */
 .Underline span{
     width: 15px;
     height: 100%;
@@ -346,6 +410,7 @@ hr{
     animation: moving 2s linear infinite;
 }
 
+/* Keyframes for underline animation */
 @keyframes moving{
     0%{
         left: -20%;
