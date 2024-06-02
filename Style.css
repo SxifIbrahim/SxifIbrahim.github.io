@@ -28,7 +28,6 @@ body{
 }
 
 /* Custom cursor for the entire document */
-
 html {
     cursor: url('Extras/cursor.png'), auto;
 }
@@ -154,7 +153,6 @@ footer{
     margin-bottom: 40px;
     margin-top: 25px;
 }
-
 
 /* Footer heading styling */
 .Info h2{

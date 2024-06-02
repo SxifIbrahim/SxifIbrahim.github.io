@@ -1,4 +1,4 @@
-
+/* Define custom font */
 @font-face { 
     font-family: Andy Bold Font; 
     src: url('Extras/ANDYB.TTF'); 
@@ -10,7 +10,7 @@
     src: url('Extras/ANDYB.TTF');
 }
  
-
+/* Reset margin, padding, and set box-sizing and font */
 *{
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@
     font-family: Andy Bold Font;
 }
 
-
+/* Style the body element */
 body{
     background: #e3edf7;
     position: relative;
@@ -31,12 +31,12 @@ body{
     background-size: contain;
 }
 
-
+/* Custom cursor for the entire document */
 html {
     cursor: url('Extras/cursor.png'), auto;
 }
 
-
+/* Main container styling */
 .main{
     width: 100%;
     min-height: 100%;
@@ -48,7 +48,7 @@ html {
     justify-content: center;
 }
 
-
+/* Navigation bar styling */
 nav{
     width: 100%;
     position: absolute;
@@ -60,19 +60,19 @@ nav{
     justify-content: space-between;
 }
 
-
+/* Logo image styling */
 nav .Terraria{
     width: 300px;
 }
 
-
+/* Navigation menu item styling */
 nav ul li{
     list-style: none;
     display: inline-block;
     margin-left: 40px;
 }
 
-
+/* Navigation links styling */
 nav ul li a{
     text-decoration: none;
     color: #fff;
@@ -82,7 +82,7 @@ nav ul li a{
     border-radius: 20px;
 }
 
-
+/* Hover and active state styling for navigation links */
 nav ul li a:hover,
 nav ul li a.Active{
     background: #fff;
@@ -90,12 +90,13 @@ nav ul li a.Active{
 }
 
 
+/* Accordion container styling */
 .accordion{
     margin-top: -370px;
     width: 600px;
 }
 
-
+/* Individual accordion item styling */
 .accordion li{
     list-style: none;
     width: 100%;
@@ -107,7 +108,7 @@ nav ul li a.Active{
                 -6px -6px 10px -1px rgba(225, 225, 225, 0.7);
 }
 
-
+/* Accordion label styling */
 .accordion li label{
     display: flex;
     align-items: center;
@@ -117,20 +118,36 @@ nav ul li a.Active{
     cursor: pointer;
 }
 
-
-label::before{
-    content: '+';
+/* Dig label styling */
+.dig-label::before{
+    content: url('Extras/test.png');
     margin-right: 10px;
     font-size: 32px;
     font-weight: 600;
 }
 
+/* Fight label styling */
+.fight-label::before{
+    content: url('Extras/test2.png');
+    margin-right: 10px;
+    font-size: 32px;
+    font-weight: 600;
+}
 
+/* Build label styling */
+.build-label::before{
+    content: url('Extras/test3.webp');
+    margin-right: 10px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* Hide radio input elements */
 input[type="radio"]{
     display: none;
 }
 
-
+/* Accordion content styling */
 .accordion .content{
     color: #000;
     font-size: 18px;
@@ -141,15 +158,10 @@ input[type="radio"]{
     transition: max-height 0.5s, padding 0.5s;
 }
 
-
+/* Style for checked radio input and corresponding content */
 input[type="radio"]:checked + label + .content{
     max-height: 400px;
     padding: 10px 10px 20px;
-}
-
-
-input[type="radio"]:checked + label::before{
-    content: '-';
 }
 
 /* Footer styling */

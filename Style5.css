@@ -10,7 +10,7 @@
   src: url('Extras/ANDYB.TTF'); 
 }
 
-/* Reset margin, padding, and set box-sizing and font for all elements */
+/* Reset margin, padding, and set box-sizing and font */
 * {
   margin: 0;
   padding: 0;
@@ -46,7 +46,7 @@ a {
   color: inherit;
 }
 
-/* Body styles */
+/* Style the body element */
 body {
   background: #000;
   position: relative;
@@ -58,7 +58,7 @@ body {
   background-size: contain;
 }
 
-/* Main container styles */
+/* Main container styling */
 .main {
   width: 100%;
   min-height: 100%;
@@ -70,7 +70,7 @@ body {
   justify-content: center;
 }
 
-/* Navigation bar styles */
+/* Navigation bar styling */
 nav {
   width: 100%;
   position: absolute;
@@ -82,19 +82,19 @@ nav {
   justify-content: space-between;
 }
 
-/* Logo inside navigation bar */
+/* Logo image styling */
 nav .Terraria {
   width: 300px;
 }
 
-/* Navigation menu item styles */
+/* Navigation menu item styling */
 nav ul li {
   list-style: none;
   display: inline-block;
   margin-left: 40px;
 }
 
-/* Navigation links styles */
+/* Navigation links styling */
 nav ul li a {
   text-decoration: none;
   color: #fff;
@@ -104,7 +104,7 @@ nav ul li a {
   border-radius: 20px;
 }
 
-/* Hover and active state styles for navigation links */
+/* Hover and active state styling for navigation links */
 nav ul li a:hover,
 nav ul li a.Active {
   background: #fff;
@@ -340,8 +340,8 @@ nav ul li a.Active {
   }
 }
 
-/* Footer styles */
-footer {
+/* Footer styling */
+footer{
   width: 100%;
   height: 430px;
   position: absolute;
@@ -357,8 +357,8 @@ footer {
   margin-top: auto;
 }
 
-/* Footer container styles */
-.Foot {
+/* Footer container styling */
+.Foot{
   width: 85%;
   margin: auto;
   display: flex;
@@ -367,27 +367,27 @@ footer {
   justify-content: space-between;
 }
 
-/* Footer info section styles */
-.Info {
+/* Footer information section styling */
+.Info{
   flex-basis: 25%;
   padding: 10px;
 }
 
-/* Specific info section styles */
+/* Specific styling for second and third Info sections */
 .Info:nth-child(2), 
-.Info:nth-child(3) {
+.Info:nth-child(3){
   flex-basis: 15%;
 }
 
-/* Footer logo styles */
-.Relogic {
+/* Re-Logic logo styling in footer */
+.Relogic{
   width: 200px;
   margin-bottom: 40px;
   margin-top: 25px;
 }
 
-/* Footer heading styles */
-.Info h2 {
+/* Footer heading styling */
+.Info h2{
   width: fit-content;
   margin-bottom: 50px;
   margin-top: 35px;
@@ -395,27 +395,27 @@ footer {
   font-weight: bold;
 }
 
-/* Footer email section styles */
-.Email {
+/* Email section styling in footer */
+.Email{
   width: fit-content;
   border-bottom: 1px solid #ccc;
   margin: 20px 0;
 }
 
-/* Footer list item styles */
-ul li {
+/* List item styling */
+ul li{
   list-style: none;
   margin-bottom: 12px;
 }
 
-/* Footer link styles */
-ul li a {
+/* Footer links styling */
+ul li a{
   text-decoration: none;
   color: white;
 }
 
-/* Footer form styles */
-form {
+/* Form styling in footer */
+form{
   padding-bottom: 15px;
   display: flex;
   align-items: center;
@@ -424,14 +424,14 @@ form {
   margin-bottom: 50px;
 }
 
-/* Form icon styles */
-form .far {
+/* Font Awesome icons styling in form */
+form .far{
   font-size: 18px;
   margin-right: 10px;
 }
 
-/* Form input styles */
-form input {
+/* Form input styling */
+form input{
   width: 100%;
   background: transparent;
   color: #ccc;
@@ -439,22 +439,22 @@ form input {
   outline: none;
 }
 
-/* Form button styles */
-form button {
+/* Form button styling */
+form button{
   background: transparent;
   border: 0;
   outline: none;
   cursor: pointer;
 }
 
-/* Form button icon styles */
-form button .fas {
+/* Font Awesome icons styling in form button */
+form button .fas{
   font-size: 16px;
   color: #ccc;
 }
 
-/* Footer social icon styles */
-.Socials .fab {
+/* Social media icon styling */
+.Socials .fab{
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -467,21 +467,21 @@ form button .fas {
   cursor: pointer;
 }
 
-/* Horizontal rule styles */
-hr {
+/* Horizontal rule styling */
+hr{
   width: 90%;
   border: 0;
   border-bottom: 1px solid #ccc;
   margin: 20px auto;
 }
 
-/* Footer copyright section styles */
-.CopyRight {
+/* Copyright section styling */
+.CopyRight{
   text-align: center;
 }
 
-/* Underline animation container styles */
-.Underline {
+/* Underline effect styling */
+.Underline{
   width: 100%;
   height: 5px;
   background: #767676;
@@ -492,8 +492,8 @@ hr {
   overflow: hidden;
 }
 
-/* Underline animation span styles */
-.Underline span {
+/* Animation span styling within underline */
+.Underline span{
   width: 15px;
   height: 100%;
   background: #fff;
@@ -504,12 +504,12 @@ hr {
   animation: moving 2s linear infinite;
 }
 
-/* Underline animation keyframes */
-@keyframes moving {
-  0% {
+/* Keyframes for underline animation */
+@keyframes moving{
+  0%{
       left: -20%;
   }
-  100% {
-      left: 100%;
+  100%{
+  left: 100%;
   }
 }
